@@ -1,0 +1,15 @@
+.vscode
+node_modules
+.vs/
+obj/
+bin/
+publish/
+.terraform/
+Vagrantfile
+terraform.tfstate
+terraform.tfstate.*
+.vagrant/
+stage.auto.tfvars
+prod.auto.tfvars
+/terraform/dev/terraform.exe
+/terraform/dev/terraform-provider-billtrust.exe

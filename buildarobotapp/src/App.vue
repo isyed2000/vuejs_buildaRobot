@@ -1,24 +1,23 @@
 <template>
-  <div id="mainComp">
+  <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <PaymentList></PaymentList>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import PaymentList from './components/PaymentList.vue'
+import HelloWorld from './components/HelloWorld.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld, PaymentList
-  }
-}
+    HelloWorld,
+  },
+};
 </script>
 
 <style>
-#mainComp{
+#app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

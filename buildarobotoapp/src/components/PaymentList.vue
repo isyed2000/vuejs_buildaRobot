@@ -1,5 +1,12 @@
 <template>
     <div>
+
+        <button @click="Toggle">Toggle Button</button>
+        <label v-if="DisplayUsingVIfBinding">Using v-if binding.  The element is removed when v-if is false.</label>
+        <label v-else-if="!DisplayUsingVIfBinding">Using v-else-if binding. v-else-if must be after v-if.</label>
+       <label v-show="DisplayUsingVIfBinding">Using v-show binding. The element style property is set to hide/display</label>
+       
+       <br/>
     <span>{{title}}</span>
     <img :src="title" :alt="title" /> <!--short hand syntax for binding-->
     <a @click="handleClick()">Click me!</a>
@@ -61,7 +68,8 @@ export default {
         return{
             title:"Welcome to Payments",
             clickCounter:0,
-            payments:[]
+            payments: [],
+            DisplayUsingVIfBinding:true
         }
     
 },
@@ -76,10 +84,12 @@ computed:
 
 
 methods:{
-   
+    Toggle: function () {
+        this.DisplayUsingVIfBinding = !this.DisplayUsingVIfBinding;
+    },
           handleClick: function() {
               this.clickCounter+=1;
-      alert(SomePrivateFunction("HandleClick" + this.clickCounter));
+              alert(SomePrivateFunction("HandleClick" + this.clickCounter));
     
     },
 

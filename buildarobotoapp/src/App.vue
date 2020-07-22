@@ -1,18 +1,36 @@
 <template>
-  <div id="mainComp">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <PaymentList></PaymentList>
-  </div>
+<div id="main">
+  This is the main page.
+<a href="#/dashboard1">Go to Dashboard 1</a>
+<router-view/>
+
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import PaymentList from './components/PaymentList.vue'
+
+import Dashboard1 from './components/Dashboard1.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld, PaymentList
+    Dashboard1
+  },
+
+  data(){
+    return {
+      selectedContact:{}
+    }
+  },
+
+  methods:{
+
+     HandleContactSelected(contact){
+
+             this.selectedContact = contact;
+     
+     }
+
   }
 }
 </script>
